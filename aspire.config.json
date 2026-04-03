@@ -1,0 +1,5 @@
+{
+  "appHost": {
+    "path": "src/perl-with-database/apphost.cs"
+  }
+}

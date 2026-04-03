@@ -14,8 +14,8 @@ my $tracer = OpenTelemetry->tracer_provider->tracer(
 
 # Aspire injects ConnectionStrings__<resource> as an environment variable
 # when .WithReference(database) is called in the AppHost.
-my $conn_string = $ENV{'ConnectionStrings__database'}
-    or die "ConnectionStrings__database environment variable is not set\n";
+my $conn_string = $ENV{'ConnectionStrings__postgres'}
+    or die "ConnectionStrings__postgres environment variable is not set\n";
 
 # Parse the Aspire connection string (format: Host=...;Port=...;Username=...;Password=...;Database=...)
 my %params;

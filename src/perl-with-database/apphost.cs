@@ -1,5 +1,5 @@
 ﻿#:package Aspire.Hosting.PostgreSQL@13.3.0-preview.1.26163.4
-#:package CommunityToolkit.Aspire.Hosting.Perl@13.1.2-dev
+#:package CommunityToolkit.Aspire.Hosting.Perl@13.1.2-dev.260315-1626
 #:sdk Aspire.AppHost.Sdk@13.2.0-preview.1.26163.12
 
 using Aspire.Hosting;
@@ -17,6 +17,13 @@ var worker = builder.AddPerlScript("worker", "scripts", "workerService.pl")
     .WithPackage("OpenTelemetry::SDK")
     .WithPackage("DBI")
     .WithPackage("DBD::Pg")
+    .WithReference(database)
+    .WaitFor(database);
+
+var api = builder.AddPerlApi("api", "scripts", "apiService.pl")
+    .WithCpanMinus()
+    .WithLocalLib()
+    .WithPackage("Mojolicious")
     .WithReference(database)
     .WaitFor(database);
 
