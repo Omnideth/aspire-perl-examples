@@ -1,0 +1,19 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.2.0-preview.1.26106.8">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>3e489289-1339-44ad-9ecf-ab7989e63fc5</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Aspire.Hosting.Perl" Version="13.1.2-dev.260315-1626" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PerlBlazor.Web\PerlBlazor.Web.csproj" />
+  </ItemGroup>
+
+</Project>

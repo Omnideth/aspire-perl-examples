@@ -24,6 +24,7 @@ var worker = builder.AddPerlScript("worker", "scripts", "workerService.pl")
 var api = builder.AddPerlApi("api", "scripts", "apiService.pl")
     .WithCpanMinus()
     .WithLocalLib()
+    .WithPackage("OpenTelemetry::SDK")
     .WithPackage("Mojolicious")
     .WithReference(database)
     .WaitFor(database);
