@@ -9,10 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Aspire.Hosting.Perl" Version="13.1.2-dev.260315-1626" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\PerlBlazor.ApiService\PerlBlazor.ApiService.csproj" />
     <ProjectReference Include="..\PerlBlazor.Web\PerlBlazor.Web.csproj" />
   </ItemGroup>
 

@@ -1,5 +1,5 @@
 {
   "appHost": {
-    "path": "src/perl-with-database/apphost.cs"
+    "path": "src/perl-with-blazor/PerlBlazor.AppHost/PerlBlazor.AppHost.csproj"
   }
 }
