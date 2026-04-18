@@ -1,0 +1,28 @@
+{
+    "name": "Aspire Perl Examples",
+    "image": "mcr.microsoft.com/devcontainers/dotnet:10.0-noble",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/dnegstad/devcontainer-dev-certs/devcontainer-dev-certs:latest": {}
+    },
+    "remoteUser": "vscode",
+    "containerEnv": {
+        "ASPIRE_ALLOW_UNSECURED_TRANSPORT": "true"
+    },
+    "postCreateCommand": "./.devcontainer/post-create-script.sh",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-dotnettools.csharp",
+                "ms-dotnettools.csdevkit",
+                "ms-dotnettools.dotnet-aspire",
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "GitHub.vscode-github-actions",
+                "GitHub.vscode-pull-request-github",
+                "nihilus118.perl-debugger",
+                "bscan.perlnavigator"
+            ]
+        }
+    }
+}
