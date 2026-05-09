@@ -12,7 +12,3 @@ my $payload = {
 };
 
 print encode_json($payload), "\n";
-
-# Keep the resource alive so it stays visible in the Aspire dashboard.
-# Without this the process exits immediately and the resource flips to "Finished".
-sleep 3600;
