@@ -3,7 +3,7 @@ set -e
 
 echo "Installing system dependencies..."
 sudo apt-get update && \
-    sudo apt-get install -y --no-install-recommends perl cpanminus && \
+    sudo apt-get install -y --no-install-recommends perl cpanminus libpq-dev build-essential&& \
     sudo apt-get clean -y && \
     sudo rm -rf /var/lib/apt/lists/*
 

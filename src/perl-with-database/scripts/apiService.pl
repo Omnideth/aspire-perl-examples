@@ -105,9 +105,13 @@ get '/api/activity' => sub ($c) {
     );
 };
 
+my $listen_url = sprintf('http://*:%s', $ENV{PORT} // 8080);
+
 if (!@ARGV) {
-    my $port = $ENV{PORT} // 8080;
-    @ARGV = ('daemon', '-l', "http://*:$port");
+    @ARGV = ('daemon', '-l', $listen_url);
+}
+elsif ($ARGV[0] eq 'daemon' && !grep { $_ eq '-l' || $_ eq '--listen' } @ARGV) {
+    push @ARGV, '-l', $listen_url;
 }
 
 app->start;
