@@ -64,5 +64,5 @@ while (1) {
         print "Tick $tick_count: inserted row into activity_log\n";
     });
 
-    sleep 60;
+    sleep 10;
 }

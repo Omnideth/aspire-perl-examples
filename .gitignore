@@ -418,3 +418,13 @@ FodyWeavers.xsd
 *.msp
 
 **/local/*
+**/*.lscache
+**/bin/*
+**/obj/*
+**/local/*
+**/man/*
+.aspire/**
+.claude/**
+.github/**
+.playwright/**
+dotnet/runfile-discovery/**

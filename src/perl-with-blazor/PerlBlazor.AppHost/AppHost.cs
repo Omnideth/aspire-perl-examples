@@ -1,6 +1,10 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-var apiService = builder.AddProject<Projects.PerlBlazor_ApiService>("apiservice")
+var apiService = builder.AddPerlApi("apiservice", "../scripts", "weatherApi.pl")
+    .WithHttpEndpoint(env: "PORT")
+    .WithCpanMinus()
+    .WithProjectDependencies()
+    .WithLocalLib("local")
     .WithHttpHealthCheck("/health");
 
 builder.AddProject<Projects.PerlBlazor_Web>("webfrontend")

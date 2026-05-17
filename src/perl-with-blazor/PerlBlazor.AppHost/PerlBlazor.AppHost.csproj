@@ -1,4 +1,4 @@
-<Project Sdk="Aspire.AppHost.Sdk/13.2.0-preview.1.26106.8">
+<Project Sdk="Aspire.AppHost.Sdk/13.4.0-preview.1.26264.12">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -9,8 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PerlBlazor.ApiService\PerlBlazor.ApiService.csproj" />
     <ProjectReference Include="..\PerlBlazor.Web\PerlBlazor.Web.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Aspire.Hosting.Perl" Version="13.3.0" />
+  </ItemGroup>
 </Project>
