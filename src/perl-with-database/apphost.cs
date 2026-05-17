@@ -1,7 +1,7 @@
-﻿#:package Aspire.Hosting.JavaScript@13.4.0-preview.1.26259.2
-#:package Aspire.Hosting.PostgreSQL@13.4.0-preview.1.26259.2
-#:package CommunityToolkit.Aspire.Hosting.Perl@13.1.2-dev.260315-1626
-#:sdk Aspire.AppHost.Sdk@13.4.0-preview.1.26259.2
+#:package Aspire.Hosting.JavaScript@13.4.0-preview.1.26264.14
+#:package Aspire.Hosting.PostgreSQL@13.4.0-preview.1.26264.14
+#:package CommunityToolkit.Aspire.Hosting.Perl@13.3.0
+#:sdk Aspire.AppHost.Sdk@13.4.0-preview.1.26264.14
 
 using Aspire.Hosting;
 
@@ -17,18 +17,15 @@ var worker = builder.AddPerlScript("worker", "scripts", "workerService.pl")
     .WithLocalLib()
     .WithPackage("OpenTelemetry::SDK")
     .WithPackage("DBI")
-    .WithPackage("DBD::Pg")
+    .WithPackage("DBD::Pg", force: true, skipTest: true)
     .WithReference(database)
     .WaitFor(database);
 
 var api = builder.AddPerlApi("api", "scripts", "apiService.pl")
     .WithHttpEndpoint(env: "PORT")
-    .WithCpanMinus()
+    .WithCarton()
+    .WithProjectDependencies(cartonDeployment: false)
     .WithLocalLib()
-    .WithPackage("OpenTelemetry::SDK", force: true, skipTest: true)
-    .WithPackage("Mojolicious")
-    .WithPackage("DBI")
-    .WithPackage("DBD::Pg")
     .WithReference(database)
     .WaitFor(database);
 

@@ -423,4 +423,8 @@ FodyWeavers.xsd
 **/obj/*
 **/local/*
 **/man/*
-**package-lock.json
+.aspire/**
+.claude/**
+.github/**
+.playwright/**
+dotnet/runfile-discovery/**

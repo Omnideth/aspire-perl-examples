@@ -2,20 +2,22 @@
     "name": "Aspire Perl Examples",
     "image": "mcr.microsoft.com/devcontainers/dotnet:10.0-noble",
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/dnegstad/devcontainer-dev-certs/devcontainer-dev-certs:latest": {}
+        "ghcr.io/devcontainers/features/docker-in-docker:2.17.0": {},
+        "ghcr.io/dnegstad/devcontainer-dev-certs/devcontainer-dev-certs:1.0.3": {},
+        "ghcr.io/devcontainers/features/node:2": {}
     },
     "remoteUser": "vscode",
     "containerEnv": {
         "ASPIRE_ALLOW_UNSECURED_TRANSPORT": "true"
     },
-    "postCreateCommand": "./.devcontainer/post-create-script.sh",
+    "postCreateCommand": "bash -lc \"sed 's/\\r$//' .devcontainer/post-create-script.sh | bash\"",
     "customizations": {
         "vscode": {
             "extensions": [
                 "ms-dotnettools.csharp",
                 "ms-dotnettools.csdevkit",
                 "ms-dotnettools.dotnet-aspire",
+                "microsoft-aspire.aspire-vscode",
                 "GitHub.copilot",
                 "GitHub.copilot-chat",
                 "GitHub.vscode-github-actions",
