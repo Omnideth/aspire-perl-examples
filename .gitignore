@@ -427,9 +427,10 @@ FodyWeavers.xsd
 .claude/**
 .github/**
 .playwright/**
+.agents/**
 dotnet/runfile-discovery/**
-
-# JS/Node frontend build artifacts
 **/.next/
+**/.angular/
+**/frontend/dist/
 **/node_modules/
 **/package-lock.json

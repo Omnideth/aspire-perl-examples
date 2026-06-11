@@ -1,0 +1,23 @@
+:root {
+  color-scheme: light;
+  font-family: 'Segoe UI', sans-serif;
+  --bg: #f6f3ee;
+  --panel: rgba(255, 255, 255, 0.78);
+  --ink: #0f172a;
+  --muted: #5b6573;
+  --accent: #e76f51;
+  --border: rgba(15, 23, 42, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(231, 111, 81, 0.22), transparent 32%),
+    linear-gradient(150deg, #fffdf8 0%, var(--bg) 58%, #dde8f4 100%);
+  color: var(--ink);
+}
