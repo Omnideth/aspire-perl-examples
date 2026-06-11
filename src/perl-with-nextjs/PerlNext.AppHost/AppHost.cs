@@ -28,7 +28,7 @@ if (OperatingSystem.IsWindows())
 
 api.WithHttpHealthCheck("/health");
 
-builder.AddNpmApp("web", "../frontend", "dev")
+builder.AddJavaScriptApp("web", "../frontend", "dev")
     .WithHttpEndpoint(env: "PORT")
     .WithExternalHttpEndpoints()
     .WithReference(api)
