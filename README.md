@@ -26,13 +26,19 @@ Full-stack file-based example with a Perl API and worker service, a database-bac
 
 Multi-project Aspire solution that pairs Perl with a Blazor web application and supporting C# services. This is to highlight just that it can be a backend exclusively if you want, and just stole the /weatherforecast behavior from the blazor template as a shortcut to something familiar.
 
+### `perl-with-nextjs`
+
+Multi-project Aspire solution with a Next.js frontend, a Perl API, and a Postgres-backed storage setup. This sample shows a modern React-style frontend *(even if it's kinda ugly)* talking to a Perl service through Aspire service discovery and coordinated startup.
+
+### `perl-with-angular`
+
+Multi-project Aspire solution with an Angular frontend and a Perl API. This sample shows Angular dev-server integration, proxying to the Perl backend, and the same package/dependency setup used by the other Perl web samples.
+
 ## Planned example types
 
 The broader sample roadmap lives in [docs/examples-plan.md](docs/examples-plan.md). Planned scenarios currently include:
 
 - Mojolicious full-stack app
-- Next.js frontend with Perl backend
-- Angular frontend with Perl backend
 - Perlbrew environment demo
 - Dockerfile publishing example
 
